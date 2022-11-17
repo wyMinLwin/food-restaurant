@@ -1,0 +1,20 @@
+$red-color: #d72323;
+$darker-red-color: #ad0000;
+$text-color: #fff;
+$yellow-color: #fff98c;
+$dark-yellow-color: #ffd615;
+$gray-color: #1b1b1b;
+$black: rgb(10, 10, 10);
+// Theme colors
+$primary: $red-color;
+$secondary: $yellow-color;
+$danger: $darker-red-color;
+$warning: $dark-yellow-color;
+$light: $text-color;
+$black: $gray-color;
+$success: $black;
+// customizes
+$navbar-dark-color: $light;
+$navbar-dark-active-color: $yellow-color;
+$navbar-dark-hover-color: $yellow-color;
+$border-color: $primary;

@@ -1,0 +1,152 @@
+@use "./custom" as *;
+@import "./variables"; // when connect another file name underscore first
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+/* Hero */
+#home {
+  min-height: 100vh;
+  background: url(../assets/imgs/home-background.jpg) center/cover no-repeat;
+}
+
+.arrowUp {
+  position: fixed;
+  bottom: 10%;
+  left: 85%;
+  background-color: $primary;
+  padding: 0.6em 1em;
+  border-radius: 20%;
+  visibility: none;
+  z-index: -100;
+}
+
+.show-arrowUp {
+  visibility: visible;
+  z-index: 100;
+}
+
+.fixed-nav {
+  background-color: $danger;
+  transition: all 0.5s ease-out;
+  box-shadow: 0 0 0.5rem 0.6rem #1414144c !important;
+}
+// .nav-link:focus {
+//   color: $secondary;
+// }
+.socials :hover {
+  cursor: pointer;
+  color: $secondary;
+  // transform: scale(0.8);
+  transition: all 0.4s ease-out;
+}
+
+.recom:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: all 0.5s ease-out;
+}
+
+.bar {
+  background-color: $primary;
+  width: 3em;
+  height: 0.2em;
+}
+
+
+.customizeBtn {
+  color: #141414;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  background: #f6f6f6;
+  border: 0.5px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+.customizeBtn:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.btnActive {
+  background-color: #141414;
+  color: #ffffff;
+}
+
+.btn_container {
+  @include mobile {
+    overflow: scroll;
+  }
+}
+
+p,
+span {
+  @include mobile {
+    font-size: 0.8em !important;
+  }
+}
+h1 {
+  @include mobile {
+    font-size: 2.2em !important;
+  }
+}
+h2 {
+  span {
+    @include mobile {
+      font-size: 1.1em !important;
+    }
+  }
+  @include mobile {
+    font-size: 1.9em !important;
+  }
+}
+h5 {
+  @include mobile {
+    font-size: 0.9em !important;
+  }
+}
+
+.eye:hover {
+  cursor: pointer;
+  color: $primary !important;
+}
+.cart:hover {
+  cursor: pointer;
+  color: $primary !important;
+}
+.menuPhoto:hover .viewDetails {
+  opacity: 1 !important;
+}
+.menuPhoto:hover .imgPhoto {
+  cursor: pointer;
+  transition: all 0.6s ease-out;
+  filter: opacity(0.6);
+}
+
+.viewDetails button {
+  @include mobile {
+    font-size: 0.57rem;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/variables";
